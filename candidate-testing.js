@@ -18,7 +18,7 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName = prompt("Please enter your name.");   
+  candidateName = input.prompt("Please enter your name.");   
 
 }
 
@@ -26,7 +26,7 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 console.log(question);
-  candidateAnswer = prompt("Please answer."); 
+  candidateAnswer = input.prompt("Please answer."); 
   
 
 
