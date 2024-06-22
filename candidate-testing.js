@@ -18,16 +18,15 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName = input.prompt("Please enter your name.");   
+  let candidateName = input.question("Please enter your name.");   
 
 }
 
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-console.log(question);
-  candidateAnswer = input.prompt("Please answer."); 
-  
+ let candidateAnswer = input.question("Please answer."); 
+ console.log(question);
 
 
 }
