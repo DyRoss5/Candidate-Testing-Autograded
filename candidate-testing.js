@@ -17,12 +17,12 @@ let questions = ["Who was the first American woman in space? ",
 "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
 "What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride","true","40","Trajectory", "3"];
-let candidateAnswers = [""];
+let candidateAnswers = [];
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  candidateName = input.question("Please enter your name:");   
+  candidateName = input.question("Please enter your name: ");   
 
 }
 
@@ -30,21 +30,22 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (i=0; i < questions.length; i++) {
-    candidateAnswers = input.question(questions[i]);
-    correctAnswers.push(candidateAnswers[i]);
-    console.log(candidateAnswers);
-    console.log(correctAnswers[i]);
+    candidateAnswers.push(input.question(questions[i]));
+    console.log(candidateAnswers[i]);
+    
   }
      
   }
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-let output = `The candidate's answers are ${candidateAnswers}. The correct answers are ${correctAnswers}.`;
-if (candidateAnswers === correctAnswers); {
-   
-  } console.log(output);
+for (i=0; i < 0; j++); 
+  if (candidateAnswers[i] === correctAnswers[i]) {
+    console.log(`${candidateAnswers[i]} is correct.`);
+    } else if (candidateAnswers[i] != correctAnswers[i]) {
+      console.log(`The answer is incorrect. The correct answer is ${correctAnswers[i]}.`); 
+        }   
+  
   
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
@@ -56,7 +57,7 @@ return grade;
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello," + candidateName + "!");
+   console.log("Hello, " + candidateName + "!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
