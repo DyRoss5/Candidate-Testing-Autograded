@@ -29,9 +29,10 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  for (i=0; i < questions.length; i++) {
+  for (let i = 0; i < questions.length; i++) {
     candidateAnswers.push(input.question(questions[i]));
     console.log(candidateAnswers[i]);
+    console.log(correctAnswers[i]);
     
   }
      
@@ -39,13 +40,13 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-for (i=0; i < 0; j++); 
+for (let i = 0; i < correctAnswers.length; i++) {
   if (candidateAnswers[i] === correctAnswers[i]) {
     console.log(`${candidateAnswers[i]} is correct.`);
     } else if (candidateAnswers[i] != correctAnswers[i]) {
       console.log(`The answer is incorrect. The correct answer is ${correctAnswers[i]}.`); 
         }   
-  
+      }
   
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
