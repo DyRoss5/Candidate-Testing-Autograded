@@ -12,10 +12,10 @@ let candidateAnswer = "";
 
 //TODO: Variables for Part 2
 let questions = ["Who was the first American woman in space? ",
-"True or false: 5 kilometer == 5000 meters? ",
-"(5 + 3)/2 * 10 = ? ",
-"Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
-"What is the minimum crew size for the ISS? "];
+                 "True or false: 5 kilometer == 5000 meters? ",
+                 "(5 + 3)/2 * 10 = ? ",
+                 "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
+                 "What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride","true","40","Trajectory", "3"];
 let candidateAnswers = [];
 
@@ -31,8 +31,8 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers.push(input.question(questions[i]));
-    console.log(candidateAnswers[i]);
-    console.log(correctAnswers[i]);
+    console.log(`Your answer: ${candidateAnswers[i]}`);
+    console.log(`The correct answer: ${correctAnswers[i]}`);
     
   }
      
@@ -51,8 +51,22 @@ for (let i = 0; i < correctAnswers.length; i++) {
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
+grade = 0;
+for (let i = 0; i < questions.length; i++) {
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+    grade += 20;
+  }
+  console.log(`Your answer is ${candidateAnswers[i]}. The correct answer is ${correctAnswers[i]}.`)
+}
+
+if (grade >= 80) {
+  console.log(`Congratulations! You passed with a ${grade}%`)
+} else {
+  console.log(`Sorry! You failed with a ${grade}%`)
+}
 
 return grade;
+
 }
 
 function runProgram() {
